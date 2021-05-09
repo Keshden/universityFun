@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_07_080638) do
+ActiveRecord::Schema.define(version: 2021_05_09_215006) do
 
   create_table "bookstores", force: :cascade do |t|
     t.string "bookName"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2021_05_07_080638) do
     t.integer "schoolYear"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "roles", default: "Student"
   end
 
   create_table "teachers", force: :cascade do |t|
@@ -48,6 +49,7 @@ ActiveRecord::Schema.define(version: 2021_05_07_080638) do
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "roles", default: "Teacher"
   end
 
 end
