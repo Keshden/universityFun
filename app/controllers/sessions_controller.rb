@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = Student.find_by(username: params[:session][:username.downcase]) ||= Teacher.find_by(username: params[:session][:username.downcase])
+    user = Student.find_by(username: params[:session][:username.downcase]) || user = Teacher.find_by(username: params[:session][:username.downcase])
     if user && user.authenticate(params[:session][:password])
       session[:username] = user.username
       flash[:success] = "You have successfully logged in"

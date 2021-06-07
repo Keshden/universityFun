@@ -8,6 +8,6 @@ class Student < User
   validate :username_is_unique
 
   def username_is_unique
-    self.errors.add(:name, 'is already taken') if Student.where(username: self.username).exists?
+    self.errors.add(:name, 'is already taken') if Teacher.where(username: self.username).exists?
   end
 end

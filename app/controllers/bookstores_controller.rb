@@ -1,6 +1,6 @@
 class BookstoresController < ApplicationController
-  before_action :set_book, only: [:edit, :update, :show, :destroy]
-  before_action :require_bookstore_level_admin, except: [:index, :show]
+  #before_action :set_book, only: [:edit, :update, :show, :destroy]
+  #before_action :require_bookstore_level_admin, except: [:index, :show]
 
   def index
     @books = Bookstore.all

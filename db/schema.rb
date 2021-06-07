@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_09_215006) do
+ActiveRecord::Schema.define(version: 2021_06_07_222131) do
 
   create_table "bookstores", force: :cascade do |t|
     t.string "bookName"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2021_05_09_215006) do
     t.integer "bookPrice"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "itemSummary"
   end
 
   create_table "courses", force: :cascade do |t|
@@ -28,6 +29,7 @@ ActiveRecord::Schema.define(version: 2021_05_09_215006) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "courseRequirementType"
     t.string "courseIdentifier"
+    t.string "courseSummary"
   end
 
   create_table "students", force: :cascade do |t|
@@ -50,6 +52,7 @@ ActiveRecord::Schema.define(version: 2021_05_09_215006) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "roles", default: "Teacher"
+    t.string "teachersBio"
   end
 
 end
