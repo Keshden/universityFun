@@ -4,4 +4,5 @@ class Bookstore < ApplicationRecord
             length: { minimum: 3, maximum: 100 }
   validates :authorName, presence: true, length: { minimum: 3, maximum: 100 }
   validates :bookPrice, presence: true
+  validates :itemsummary, presence: true, length: { minimum: 15, maximum: 300 }
 end

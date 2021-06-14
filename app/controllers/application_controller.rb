@@ -1,10 +1,10 @@
 class ApplicationController < ActionController::Base
 
-  helper_method :current_user, :logged_in?
+  #helper_method :current_user, :logged_in?
 
-  def current_user
-    @current_user ||= (Student.find(session[:username]) if session[:username]) ||= (Teacher.find(session[:username]) if session[:username])
-  end
+  ##def current_user
+  #  @current_user ||= (Student.find(session[:username]) if session[:username]) ||= (Teacher.find(session[:username]) if session[:username])
+  #end
 
   def logged_in?
     !!current_user
